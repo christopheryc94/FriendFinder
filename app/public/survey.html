@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Friend Finder Survey</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- jquery  -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<!-- css --> 
+	<!-- fix link route?? -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>	
+	<div class="container">	
+		<h2>Survey Questions</h2>
+		<br>
+
+		<h3><strong>About You</strong></h3>
+		<h5>Name (Required)</h5>
+		<input type="text" class="form-control" id="name" required>
+
+		<h5>Link to Photo Image (Required)</h5>
+		<input type="text" class="form-control" id="photo" required>
+		<br>
+
+		<form>
+		  <div class="form-group">
+		    <label>Game of Thrones is the Best Show Ever</label>
+		    <select data-placeholder="" class="form-control-file" id="q1">
+		      <option value=""></option>
+		      <option value="1">1 (Strongly Disagree)</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5 (Strongly Agree)</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label>Step Brothers is the best Comedy</label>
+		    <select class="form-control-file" id="q2">
+		      <option value=""></option>
+		      <option value="1">1 (Strongly Disagree)</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5 (Strongly Agree)</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label>Lion King is the Best Disney Movie</label>
+		    <select class="form-control-file" id="q3">
+		      <option value=""></option>
+		      <option value="1">1 (Strongly Disagree)</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5 (Strongly Agree)</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label>I love Breaking Bad</label>
+		    <select class="form-control-file" id="q4">
+		      <option value=""></option>
+		      <option value="1">1 (Strongly Disagree)</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5 (Strongly Agree)</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label>I'm the best at Harry Potter Trivia</label>
+		    <select class="form-control-file" id="q5">
+		      <option value=""></option>
+		      <option value="1">1 (Strongly Disagree)</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5 (Strongly Agree)</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label>I love Taylor Swift's Music</label>
+		    <select class="form-control-file" id="q6">
+		      <option value=""></option>
+		      <option value="1">1 (Strongly Disagree)</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5 (Strongly Agree)</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label>I low key love Justin Bieber's music too</label>
+		    <select class="form-control-file" id="q7">
+		      <option value=""></option>
+		      <option value="1">1 (Strongly Disagree)</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5 (Strongly Agree)</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label>I hate Nickleback</label>
+		    <select class="form-control-file" id="q8">
+		      <option value=""></option>
+		      <option value="1">1 (Strongly Disagree)</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5 (Strongly Agree)</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label>I am a master on the rainbow road track</label>
+		    <select class="form-control-file" id="q9">
+		      <option value=""></option>
+		      <option value="1">1 (Strongly Disagree)</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5 (Strongly Agree)</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label>Sequels to movies usually suck</label>
+		    <select class="form-control-file" id="q10">
+		      <option value=""></option>
+		      <option value="1">1 (Strongly Disagree)</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5 (Strongly Agree)</option>
+		    </select>
+		  </div>
+		  <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+	            Submit
+	        </button>
+
+		</form>
+
+			<div id="myModal" class="modal">
+
+			  <!-- Modal content -->
+			  <div class="modal-content">
+			    <span class="close">&times;</span>
+			    <h3>Your new friend!</h3>
+			    <h4 id="friendName"></h4>
+			    <img src="" id="winnerPic">
+			  </div>
+
+			</div>
+
+			<footer class="footer">
+				<div class="container">
+					<p><a href="/api/friends" target="_blank">API Friends List</a> | <a href="https://github.com/christopheryc94/FriendFinder" target="_blank">GitHub Repo</a></p>
+				</div>
+			</footer>
+	</div>	
+
+<script type="text/javascript">
+
+	function fillModal(data) {
+	  $("#friendName").text(data.name);
+	  $("#winnerPic").attr("src", data.photo);
+	  $("#myModal").show();
+	}
+
+	$("#submit").on("click", function(event ) {
+	  event.preventDefault();
+	  console.log("test");
+
+	  var userData = {
+	    name: $("#name").val(),
+	    photo: $("#photo").val(),
+	    scores: [
+	      $("#q1").val(),
+	      $("#q2").val(),
+	      $("#q3").val(),
+	      $("#q4").val(),
+	      $("#q5").val(),
+	      $("#q6").val(),
+	      $("#q7").val(),
+	      $("#q8").val(),
+	      $("#q9").val(),
+	      $("#q10").val()
+	    ]
+	  };
+
+	  $.post("/api/friends", userData, function(data) {
+	    fillModal(data);
+
+	  });
+	});
+
+	//on click to close modal
+	$(".modal").on("click", ".close", function() {
+  		$(".modal").hide();
+});
+
+</script>	
+	
+</body>
+</html>
