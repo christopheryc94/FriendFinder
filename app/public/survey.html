@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<!-- css --> 
 	<!-- fix link route?? -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 </head>
 <body>	
 	<div class="container">	
@@ -168,40 +168,49 @@
 	function fillModal(data) {
 	  $("#friendName").text(data.name);
 	  $("#winnerPic").attr("src", data.photo);
+	  $("#winnerPic").attr("style", "height:250px;width:250px;");
 	  $("#myModal").show();
 	}
 
-	$("#submit").on("click", function(event ) {
+	$("#submit").on("click", function(event) {
 	  event.preventDefault();
 	  console.log("test");
 
-	  var userData = {
-	    name: $("#name").val(),
-	    photo: $("#photo").val(),
-	    scores: [
-	      $("#q1").val(),
-	      $("#q2").val(),
-	      $("#q3").val(),
-	      $("#q4").val(),
-	      $("#q5").val(),
-	      $("#q6").val(),
-	      $("#q7").val(),
-	      $("#q8").val(),
-	      $("#q9").val(),
-	      $("#q10").val()
-	    ]
-	  };
+	  var name = $("#name").val();
+	  var photo = $("#photo").val();
 
-	  $.post("/api/friends", userData, function(data) {
-	    fillModal(data);
+	  //check to make sure user filled out name and image link
+	  if(name !== "" && photo !== ""){
+		  var userData = {
+		    name: name,
+		    photo: photo,
+		    scores: [
+		      $("#q1").val(),
+		      $("#q2").val(),
+		      $("#q3").val(),
+		      $("#q4").val(),
+		      $("#q5").val(),
+		      $("#q6").val(),
+		      $("#q7").val(),
+		      $("#q8").val(),
+		      $("#q9").val(),
+		      $("#q10").val()
+		    ]
+		  };
 
-	  });
+		  $.post("/api/friends", userData, function(data) {
+		    fillModal(data);
+
+		  });
+		} else {
+			alert("please fill out your name AND an image link");
+		}
+
+		//on click to close modal
+		$(".modal").on("click", ".close", function() {
+	  		$(".modal").hide();
+		});
 	});
-
-	//on click to close modal
-	$(".modal").on("click", ".close", function() {
-  		$(".modal").hide();
-});
 
 </script>	
 	
